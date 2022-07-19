@@ -13,8 +13,12 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	data = node->n;
 	if (node->parent != NULL)
 		node = node->parent;
+	else
+		return (NULL);
 	if (node->left != NULL)
 		node = node->left;
+	else
+		return (NULL);
 	if (node->n == data)
 	{
 		if (node->parent != NULL)
